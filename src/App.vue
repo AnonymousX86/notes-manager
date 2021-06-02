@@ -1,32 +1,52 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app>
+    <v-app-bar app color="primary" dark>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+
+      <v-app-bar-title>Notes manager</v-app-bar-title>
+    </v-app-bar>
+
+    <v-navigation-drawer app v-model="drawer">
+      <v-list nav>
+        <v-list-item-group v-model="group">
+          <router-link to="/">
+            <v-list-item>
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item>
+          </router-link>
+
+          <router-link to="/about">
+            <v-list-item>
+              <v-list-item-title>About</v-list-item-title>
+            </v-list-item>
+          </router-link>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-main>
+      <v-container>
+        <router-view />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import Vue from "vue";
 
-#nav {
-  padding: 30px;
+export default Vue.extend({
+  name: "App",
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  data: () => ({
+    drawer: false,
+    group: null,
+  }),
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+  watch: {
+    group() {
+      this.drawer = false;
+    },
+  },
+});
+</script>
