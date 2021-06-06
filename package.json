@@ -1,7 +1,10 @@
 {
   "name": "notes-manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
+  "author": "Jakub Suchenek",
+  "description": "Simple notes manager",
+  "license": "GNU GPL v3.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
