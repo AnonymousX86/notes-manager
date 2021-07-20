@@ -31,8 +31,8 @@ module.exports = {
         name: "NotesManager",
         setupExe: "Notes manager Setup.exe",
         /* Not available from git */
-        iconUrl: "./src/img/icon-1.ico",
-        setupMsi: "Notes manager Setup",
+        iconUrl:
+          "C:/JetBrains/WebStorm Projects/notes-manager/src/img/icon-1.ico",
       },
     },
     {
