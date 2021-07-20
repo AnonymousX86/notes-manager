@@ -28,8 +28,8 @@ module.exports = {
     {
       name: "@electron-forge/maker-squirrel",
       config: {
-        name: "Notes manager",
-        setupExe: "Notes manager Setup",
+        name: "NotesManager",
+        setupExe: "Notes manager Setup.exe",
         /* Not available from git */
         iconUrl: "./src/img/icon-1.ico",
         setupMsi: "Notes manager Setup",
