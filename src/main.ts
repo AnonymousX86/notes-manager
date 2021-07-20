@@ -12,8 +12,4 @@ new Vue({
   store,
   vuetify,
   render: (h) => h(App),
-  created() {
-    if (this.$router.currentRoute.name !== "Home")
-      this.$router.push("/").then();
-  },
 }).$mount("#app");

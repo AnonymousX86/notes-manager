@@ -1,4 +1,4 @@
-# notes-manager
+# Notes manager
 
 ## Project setup
 ```
