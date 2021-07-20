@@ -13,6 +13,16 @@ module.exports = {
       OriginalFilename: "Notes manager.exe",
       ProductName: "Notes manager",
     },
+    ignore: [
+      /\.idea/,
+      /\.browserslistrc/,
+      /\.eslintrc\.js/,
+      /\.gitignore/,
+      /.+\.config\.js/,
+      /* File package.json is necessary */
+      /.+(?<!package)\.json/,
+      /.+\.md/,
+    ],
   },
   makers: [
     {
